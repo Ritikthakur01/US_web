@@ -1,0 +1,132 @@
+.group-detail {
+  min-height: 80vh;
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, var(--color-background), #F9FAFB);
+}
+
+.group-detail-loading,
+.group-detail-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  gap: 1rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(59, 130, 246, 0.1);
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  gap: 1rem;
+  background: rgba(59, 130, 246, 0.2);
+  transform: translateX(-5px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.group-detail-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.group-detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.group-detail-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.group-detail-description {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.group-detail-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.group-features {
+  margin-top: 2rem;
+}
+
+.group-features h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.group-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.group-features li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: var(--color-text);
+}
+
+.group-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .group-detail-title {
+    font-size: 2rem;
+  }
+
+  .group-detail-description {
+    font-size: 1rem;
+  }
+}
+
