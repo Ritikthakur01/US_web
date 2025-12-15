@@ -83,8 +83,7 @@ body.announcement-visible .header {
   object-fit: contain;
   background: linear-gradient(rgb(31, 41, 55), rgb(17, 24, 39));
   border-radius: 0.7rem;
-  margin: .2rem;
-
+  margin: .5rem;
 }
 
 
