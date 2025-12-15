@@ -1,6 +1,4 @@
 .header {
-  background: linear-gradient(rgb(31, 41, 55), rgb(17, 24, 39));
-  border-radius: 0.7rem;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   color: var(--color-text);
@@ -76,6 +74,8 @@ body.announcement-visible .header {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  background: linear-gradient(rgb(31, 41, 55), rgb(17, 24, 39));
+  border-radius: 0.7rem;
 }
 
 

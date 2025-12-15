@@ -83,8 +83,6 @@
   color: inherit;
   transition: transform 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
-  background: linear-gradient(rgb(31, 41, 55), rgb(17, 24, 39));
-  border-radius: 0.7rem;
 }
 
 .footer-logo:hover {
@@ -97,6 +95,8 @@
   width: auto;
   object-fit: contain;
   filter: brightness(1) invert(0);
+  background: linear-gradient(rgb(31, 41, 55), rgb(17, 24, 39));
+  border-radius: 0.7rem;
 }
 
 .footer-logo h3 {
