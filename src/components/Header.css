@@ -74,8 +74,6 @@ body.announcement-visible .header {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: linear-gradient(rgb(31, 41, 55), rgb(17, 24, 39));
-  border-radius: 0.7rem;
 }
 
 
@@ -83,7 +81,9 @@ body.announcement-visible .header {
   height: 100px;
   width: auto;
   object-fit: contain;
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(rgb(31, 41, 55), rgb(17, 24, 39));
+  border-radius: 0.7rem;
+  margin: .2rem;
 
 }
 
