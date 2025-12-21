@@ -178,7 +178,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p>&copy; {new Date().getFullYear()} Unique Solution Group. All rights reserved.</p>
-            <p className="footer-proprietor">Prop. Hemraj Singh Rajawat</p>
+            <p className="footer-proprietor">Co-Founder & CEO - Hemraj Singh Rajawat</p>
           </div>
         </div>
       </div>
