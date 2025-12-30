@@ -1,6 +1,6 @@
 .services-section {
   padding: 8rem 0;
-  background: linear-gradient(to bottom, #F9FAFB, var(--color-background));
+  background: linear-gradient(to bottom, rgba(17, 24, 39, 0.3), transparent);
   position: relative;
 }
 
@@ -23,7 +23,7 @@
   font-size: 3.5rem;
   text-align: center;
   margin-bottom: 1rem;
-  color: var(--color-text);
+  color: #FFFFFF;
   font-weight: 900;
   position: relative;
   display: inline-block;
@@ -47,7 +47,7 @@
 .section-subtitle {
   font-size: 1.2rem;
   text-align: center;
-  color: var(--color-text-light);
+  color: #FFFFFF;
   margin-top: 2rem;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -66,11 +66,12 @@
 }
 
 .service-card {
-  background: white;
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(10px);
   padding: 3rem 2.5rem;
   border-radius: 24px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -89,9 +90,10 @@
 }
 
 .service-card:hover {
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--color-primary);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.2);
   transform: translateY(-8px);
-  border-color: var(--color-primary);
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(31, 41, 55, 0.95);
 }
 
 .service-icon {
@@ -106,9 +108,22 @@
   filter: drop-shadow(0 4px 8px rgba(59, 130, 246, 0.3));
 }
 
+.service-logo {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* No background, padding, or border */
+}
+
 .service-entity {
   font-size: 1.5rem;
-  color: var(--color-text);
+  color: #FFFFFF;
   margin-bottom: 1.5rem;
   font-weight: 700;
   text-align: center;
@@ -127,7 +142,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  color: var(--color-text-light);
+  color: #FFFFFF;
   font-size: 0.95rem;
   line-height: 1.6;
 }

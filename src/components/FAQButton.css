@@ -39,7 +39,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   z-index: 10003;
@@ -55,9 +55,11 @@
   width: 90%;
   max-width: 700px;
   max-height: 90vh;
-  background: white;
+  background: rgba(31, 41, 55, 0.95);
+  backdrop-filter: blur(20px);
   border-radius: 24px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 10004;
   display: flex;
   flex-direction: column;
@@ -67,11 +69,11 @@
 /* Modal Header */
 .faq-modal-header {
   padding: 2.5rem 2.5rem 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05));
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
   position: relative;
 }
 
@@ -88,19 +90,19 @@
 .faq-modal-title {
   font-size: 2rem;
   font-weight: 900;
-  color: var(--color-text);
+  color: #FFFFFF;
   margin-bottom: 0.5rem;
   letter-spacing: -0.5px;
 }
 
 .faq-modal-subtitle {
   font-size: 1rem;
-  color: var(--color-text-light);
+  color: #FFFFFF;
   margin: 0;
 }
 
 .faq-modal-close {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -109,14 +111,14 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--color-text);
+  color: #FFFFFF;
   font-size: 1.2rem;
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
 
 .faq-modal-close:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   transform: rotate(90deg);
 }
 
@@ -132,7 +134,7 @@
 }
 
 .faq-modal-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: rgba(17, 24, 39, 0.5);
   border-radius: 4px;
 }
 
@@ -147,21 +149,21 @@
 
 /* FAQ Items */
 .faq-modal-item {
-  background: white;
+  background: rgba(17, 24, 39, 0.6);
   border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
   margin-bottom: 1rem;
 }
 
 .faq-modal-item:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 0 0 1px var(--color-primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(59, 130, 246, 0.2);
 }
 
 .faq-modal-item.open {
-  border-color: var(--color-primary);
+  border-color: rgba(59, 130, 246, 0.4);
 }
 
 .faq-modal-question {
@@ -177,12 +179,12 @@
   gap: 1.5rem;
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--color-text);
+  color: #FFFFFF;
   transition: all 0.3s ease;
 }
 
 .faq-modal-question:hover {
-  color: var(--color-primary);
+  color: rgba(59, 130, 246, 0.9);
 }
 
 .faq-modal-question span:first-child {
@@ -191,15 +193,19 @@
 }
 
 .faq-modal-question span:last-child {
-  color: var(--color-primary);
+  color: rgba(59, 130, 246, 0.6);
   font-size: 1.1rem;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
+.faq-modal-item.open .faq-modal-question span:last-child {
+  color: rgba(59, 130, 246, 0.8);
+}
+
 .faq-modal-answer {
   padding: 0 2rem 1.5rem;
-  color: var(--color-text-light);
+  color: #FFFFFF;
   line-height: 1.8;
   font-size: 0.95rem;
   overflow: hidden;

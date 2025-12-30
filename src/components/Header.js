@@ -126,6 +126,11 @@ const Header = () => {
             alt="Unique Solution Logo"
             className="logo-image"
           />
+          <div className="logo-text">
+            <span className="logo-text-unique">UNIQUE</span>
+            <span className="logo-text-solution">SOLUTION</span>
+            <span className="logo-text-group">GROUP</span>
+          </div>
         </Link>
         
         {/* Desktop Navigation */}
@@ -218,7 +223,14 @@ const Header = () => {
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
             <div className="mobile-nav-header">
-              <h3>Menu</h3>
+              <div className="mobile-nav-logo-section">
+                <img
+                  src="/WhatsApp_Image_2025-12-08_at_4.17.05_AM-removebg-preview.png"
+                  alt="Unique Solution Logo"
+                  className="mobile-nav-logo"
+                />
+                <h3>Menu</h3>
+              </div>
               <button 
                 className="mobile-nav-close"
                 onClick={closeMobileMenu}

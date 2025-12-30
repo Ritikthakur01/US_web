@@ -7,6 +7,7 @@ const Services = () => {
   const services = [
     {
       entity: 'Unique Solution Consultants',
+      logo: '/US_consultant_logo.jpeg',
       icon: <FaBriefcase />,
       services: [
         'Job Placement Services',
@@ -19,6 +20,7 @@ const Services = () => {
     },
     {
       entity: 'Unique Solution Spices',
+      logo: '/US_spices_logo.jpeg',
       icon: <FaPepperHot />,
       services: [
         'Premium Quality Spices',
@@ -82,7 +84,15 @@ const Services = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
             >
-              <div className="service-icon">{service.icon}</div>
+              {service.logo ? (
+                <img
+                  src={service.logo}
+                  alt={service.entity}
+                  className="service-logo"
+                />
+              ) : (
+                <div className="service-icon">{service.icon}</div>
+              )}
               <h3 className="service-entity">{service.entity}</h3>
               <ul className="service-list">
                 {service.services.map((item, itemIndex) => (

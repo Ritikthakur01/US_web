@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaArrowRight, FaBuilding, FaHeart } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -49,7 +49,9 @@ const Footer = () => {
                 alt="Unique Solution Logo"
                 className="footer-logo-image"
               />
-              <h3>Unique Solution Group</h3>
+              <h3 className="footer-logo-text">
+                <span className="footer-text-unique">UNIQUE</span> <span className="footer-text-solution">SOLUTION</span> <span className="footer-text-group">GROUP</span>
+              </h3>
             </Link>
             <p className="footer-description">
               A comprehensive organization built on four strong pillars, each dedicated to serving different aspects of business and society.
@@ -129,20 +131,44 @@ const Footer = () => {
             <h4>Our Entities</h4>
             <ul>
               <li>
-                <span>Unique Solution Consultants</span>
-                <small>Consulting | Compliance | Career Growth</small>
+                <div className="footer-entity-item">
+                  <img src="/US_consultant_logo.jpeg" alt="Unique Solution Consultants" className="footer-entity-logo" />
+                  <div>
+                    <span>UNIQUE SOLUTION CONSULTANTS</span>
+                    <small>Consulting | Compliance | Career Growth</small>
+                  </div>
+                </div>
               </li>
               <li>
-                <span>Unique Solution Spices</span>
-                <small>Taste of Purity</small>
+                <div className="footer-entity-item">
+                  <img src="/US_spices_logo.jpeg" alt="Unique Solution Spices" className="footer-entity-logo" />
+                  <div>
+                    <span>UNIQUE SOLUTION SPICES</span>
+                    <small>Taste of Purity</small>
+                  </div>
+                </div>
               </li>
               <li>
-                <span>Unique Solution Enterprises</span>
-                <small>Manufacturing Excellence</small>
+                <div className="footer-entity-item">
+                  <div className="footer-entity-icon">
+                    <FaBuilding />
+                  </div>
+                  <div>
+                    <span>UNIQUE SOLUTION ENTERPRISES</span>
+                    <small>Manufacturing Excellence</small>
+                  </div>
+                </div>
               </li>
               <li>
-                <span>Unique Solution Foundation</span>
-                <small>Serving Humanity</small>
+                <div className="footer-entity-item">
+                  <div className="footer-entity-icon">
+                    <FaHeart />
+                  </div>
+                  <div>
+                    <span>UNIQUE SOLUTION FOUNDATION</span>
+                    <small>Serving Humanity</small>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -154,7 +180,7 @@ const Footer = () => {
                 <FaEnvelope className="contact-icon" />
                 <div>
                   <strong>Email</strong>
-                  <a href="mailto:info@uniquesolution.com">info@uniquesolution.com</a>
+                  <a href="mailto:info.uniquesolutiongroup@gmail.com">info.uniquesolutiongroup@gmail.com</a>
                 </div>
               </li>
               <li>
@@ -177,8 +203,8 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-bottom-content">
-            <p>&copy; {new Date().getFullYear()} Unique Solution Group. All rights reserved.</p>
-            <p className="footer-proprietor">Co-Founder & CEO - Hemraj Singh Rajawat</p>
+            <p>&copy; 2025 <span className="footer-copyright-unique">UNIQUE</span> <span className="footer-copyright-solution">SOLUTION</span> <span className="footer-copyright-group">GROUP</span>. All rights reserved.</p>
+            <p className="footer-proprietor">Founder & CEO | Hemraj Singh Rajawat</p>
           </div>
         </div>
       </div>

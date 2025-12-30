@@ -18,6 +18,21 @@ const Groups = () => {
     'foundation': FaHeart,
   };
 
+  // Logo mapping for entities - maps group ID and name to logo path
+  const getEntityLogo = (groupId, groupName) => {
+    const id = groupId?.toLowerCase() || '';
+    const name = groupName?.toLowerCase() || '';
+    
+    if (id === 'consultants' || name.includes('consultant')) {
+      return '/US_consultant_logo.jpeg';
+    }
+    if (id === 'spices' || name.includes('spice')) {
+      return '/US_spices_logo.jpeg';
+    }
+    // Add more logos as they become available
+    return null;
+  };
+
   useEffect(() => {
     fetchGroups();
   }, []);
@@ -74,12 +89,14 @@ const Groups = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          UNIQUE SOLUTION GROUP comprises of 4 Pillars/Entities
+          <span className="groups-subtitle-unique">UNIQUE</span> <span className="groups-subtitle-solution">SOLUTION</span> <span className="groups-subtitle-group">GROUP</span> comprises of 4 Pillars/Entities
         </motion.p>
         <div className="groups-grid">
           {groups.map((group, index) => {
             const IconComponent = iconMap[group._id] || FaUsers;
             const subdomainUrl = getSubdomainUrl(group.subdomain);
+            // Prioritize entity-specific logo from public folder, then API image, then fallback to icon
+            const entityLogo = getEntityLogo(group._id, group.name) || group.image;
             
             return (
               <motion.div
@@ -97,15 +114,16 @@ const Groups = () => {
                     rel="noopener noreferrer"
                     className="group-card"
                   >
-                    <div className="group-icon">
-                      <IconComponent />
-                    </div>
-                    {group.image && (
+                    {entityLogo ? (
                       <img
-                        src={group.image}
+                        src={entityLogo}
                         alt={group.name}
                         className="group-image"
                       />
+                    ) : (
+                      <div className="group-icon">
+                        <IconComponent />
+                      </div>
                     )}
                     <div className="group-content">
                       <h3 className="group-name">{group.name}</h3>
@@ -119,15 +137,16 @@ const Groups = () => {
                   </a>
                 ) : (
                   <Link to={`/group/${group._id}`} className="group-card">
-                    <div className="group-icon">
-                      <IconComponent />
-                    </div>
-                    {group.image && (
+                    {entityLogo ? (
                       <img
-                        src={group.image}
+                        src={entityLogo}
                         alt={group.name}
                         className="group-image"
                       />
+                    ) : (
+                      <div className="group-icon">
+                        <IconComponent />
+                      </div>
                     )}
                     <div className="group-content">
                       <h3 className="group-name">{group.name}</h3>

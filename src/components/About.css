@@ -1,6 +1,6 @@
 .about-section {
   padding: 8rem 0;
-  background: linear-gradient(to bottom, var(--color-background), #F9FAFB);
+  background: linear-gradient(to bottom, transparent, rgba(17, 24, 39, 0.3));
   min-height: 80vh;
 }
 
@@ -17,14 +17,22 @@
 .about-title {
   font-size: 4rem;
   font-weight: 900;
-  color: var(--color-text);
+  color: #FFFFFF;
   margin-bottom: 1rem;
   letter-spacing: -1.5px;
   line-height: 1.1;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+}
+
+.title-unique {
+  color: #FF9933; /* Indian flag orange */
+}
+
+.title-solution {
+  color: #FFFFFF; /* White */
+}
+
+.title-group {
+  color: #138808; /* Indian flag green */
 }
 
 .title-underline {
@@ -37,10 +45,25 @@
 
 .about-subtitle {
   font-size: 1.25rem;
-  color: var(--color-text-light);
+  color: #FFFFFF;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.8;
+}
+
+.subtitle-unique {
+  color: #FF9933; /* Indian flag orange */
+  font-weight: 600;
+}
+
+.subtitle-solution {
+  color: #FFFFFF; /* White */
+  font-weight: 600;
+}
+
+.subtitle-group {
+  color: #138808; /* Indian flag green */
+  font-weight: 600;
 }
 
 .about-main {
@@ -53,7 +76,7 @@
 
 .about-text h2 {
   font-size: 2rem;
-  color: var(--color-text);
+  color: #FFFFFF;
   margin-bottom: 1.5rem;
   font-weight: 700;
 }
@@ -61,7 +84,7 @@
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--color-text-light);
+  color: #FFFFFF;
   margin-bottom: 1.5rem;
 }
 
@@ -98,19 +121,21 @@
 }
 
 .feature-card {
-  background: white;
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(10px);
   padding: 3rem 2.5rem;
   border-radius: 24px;
   text-align: center;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-card:hover {
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 0 0 1px var(--color-primary);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(59, 130, 246, 0.2);
   transform: translateY(-5px);
-  border-color: var(--color-primary);
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(31, 41, 55, 0.95);
 }
 
 .feature-icon {
@@ -124,9 +149,22 @@
   justify-content: center;
 }
 
+.feature-logo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* No background, padding, or border */
+}
+
 .feature-card h3 {
   font-size: 1.5rem;
-  color: var(--color-text);
+  color: #FFFFFF;
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
@@ -142,11 +180,11 @@
 .entity-description {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: var(--color-text-light);
+  color: #FFFFFF;
 }
 
 .feature-card p {
-  color: var(--color-text-light);
+  color: #FFFFFF;
   line-height: 1.6;
 }
 

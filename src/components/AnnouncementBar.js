@@ -45,9 +45,17 @@ const AnnouncementBar = () => {
     return null;
   }
 
+  // Filter out Republic Day icon/emoji from content
+  const filteredContent = announcement.content
+    .replace(/🇮🇳/g, '')
+    .replace(/🏳️/g, '')
+    .replace(/flag/gi, '')
+    .replace(/republic/gi, '')
+    .trim();
+
   const announcementContent = (
     <div className="announcement-content">
-      <span className="announcement-text">{announcement.content}</span>
+      <span className="announcement-text">{filteredContent}</span>
     </div>
   );
 
